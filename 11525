@@ -1,0 +1,35 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int n[50005],t,k,input;
+    int ans[50005];
+    cin>>t;
+    while(t--)
+    {
+        cin>>k;
+        int num=k;
+        for(int i=0;i<=k;i++)
+        {
+            n[i]=i+1;
+        }
+        for(int i=0;i<k;i++)
+        {
+            cin>>input;
+            ans[i]=n[input];
+            for(int j=input;j<num;j++)
+            {
+                n[j]=n[j+1];
+            }
+            num--;
+        }
+        for(int i=0;i<k-1;i++)
+        {
+            cout<<ans[i]<<" ";
+        }
+        cout<<ans[k-1]<<endl;
+    }
+    return 0;
+}
