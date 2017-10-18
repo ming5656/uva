@@ -28,8 +28,8 @@ bool isComplete(int num)
 
 int main()
 {
-    freopen("in.txt","rt",stdin);
-    freopen("out.txt","w+t",stdout);
+    //freopen("in.txt","rt",stdin);
+    //freopen("out.txt","w+t",stdout);
     char input[1024],*p;
     int num(0);
     while(cin>>input)
