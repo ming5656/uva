@@ -32,7 +32,7 @@ bool dfs(int s,int add,int t,int stick[],int cnt)
     {
         for(int i=s;i < n;i++)
         {
-            if(add + stick[i] > t)
+            while(add + stick[i] > t)
                 i++;
             if(visit[i])
                 continue;
